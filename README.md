@@ -7,11 +7,11 @@ Add these environment variables from [Developer API Keys](https://trello.com/app
 
 ## Available scripts
 ```sh
-# Marks as complete all cards in a list
-./complete.sh <list_id>
+# Marks as complete all cards in list(s)
+./complete.sh <list_id>[,<list_id>...]
 
-# Archives all cards in a list
-./archive.sh <list_id>
+# Archives all cards in list(s)
+./archive.sh <list_id>[,<list_id>...]
 ```
 
 ## Docker
@@ -29,6 +29,6 @@ docker run -it \
 # Mark all cards in a list as complete every 6 hours
 0 */6 * * * complete.sh <list_id>
 
-# Archive all cards in a list every Monday at 1 AM
-0 1 * * 1 archive.sh <list_id>
+# Archive all cards in two lists every Monday at 1 AM
+0 1 * * 1 archive.sh <list_id>,<list_id_2>
 ```
